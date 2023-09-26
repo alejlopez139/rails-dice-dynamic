@@ -22,4 +22,16 @@ class DiceController < ApplicationController
     end
     render ({:template => "dice_templates/two_ten"})
   end
+  def one_twenty
+    @rolls = []
+
+    1.times do
+      die = rand(1..20)
+
+      @rolls.push(die)
+    end
+    render ({:template => "dice_templates/one_twenty"})
+  end
+
+
 end
